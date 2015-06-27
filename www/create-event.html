@@ -10,18 +10,20 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-xs-12">
-      <ul>
-        <li>
-          <label for="">Duração (horas)</label>
-          <input type="number" name="hrs" min="1" max="24">
-        </li>
-        <li>
-          <textarea class="form-control" rows="5" id="comment" placeholder="lel"></textarea>
-        </li>
-        <li>
-          <button type="button" name="button" class="btn btn-primary">Save</button>
-        </li>
-      </ul>
+    <form ng-submit="createEvent(events)">
+        <ul>
+          <li>
+            <label for="">Duração (horas)</label>
+            <input type="number" name="hrs" min="1" max="24" ng-model="events.duration">
+          </li>
+          <li>
+            <textarea class="form-control" rows="5" id="comment" placeholder="lel" ng-model="events.description"></textarea>
+          </li>
+          <li>
+            <button type="submit" name="button" class="btn btn-primary">Save</button>
+          </li>
+        </ul>
+      </form>
     </div>
   </div>
 </div>
