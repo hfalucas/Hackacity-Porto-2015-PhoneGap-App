@@ -17,7 +17,7 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<html>
+<html ng-app="app">
 
 <head>
   <!--
@@ -29,64 +29,25 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
   <link rel="stylesheet" type="text/css" href="css/index.css">
+  <base href="/">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
   <title>Hello World</title>
 </head>
 
+
 <body>
-  <div class="container-fluid">
-    <div class="row header">
-      <div class="col-xs-2">
-        <button class="btn-app btn-prev pull-left"></button>
-      </div>
-      <div class="col-xs-8 activity-label">le header</div>
-      <div class="col-xs-2">
-        <button class="btn-app btn-next pull-right"></button>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-4">
-        <div class="activity run">
-          <div class="activity-label">activity name</div>
-        </div>
-      </div>
-      <div class="col-xs-4">
-        <div class="activity bike">
-          <div class="activity-label">activity name</div>
-        </div>
-      </div>
-      <div class="col-xs-4">
-        <div class="activity beach">
-          <div class="activity-label">activity name</div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-4">
-        <div class="activity walk">
-            <div class="activity-label">activity name</div>
-        </div>
-      </div>
-      <div class="col-xs-4">
-        <div class="activity kite-surf">
-          <div class="activity-label">activity name</div>
-        </div>
-      </div>
-      <div class="col-xs-4">
-        <div class="activity surf">
-          <div class="activity-label">activity name</div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div ui-view></div>
   <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/angular.js"></script>
+  <script type="text/javascript" src="js/ui-router.js"></script>
+  <script type="text/javascript" src="js/controllers.js"></script>
 </body>
 
 </html>

@@ -86,7 +86,9 @@ background-image:-webkit-gradient(
 
 .activity{
   height: 100px;
-  background: #555;
+  /* background: #555; */
+  border: 1px solid #555;
+  border-radius: 3px;
   margin: 20px auto;
 }
 
