@@ -4,6 +4,7 @@ var app = angular.module('app', ['ui.router']);
 var API_URL = 'http://hackacity.app:8000';
 
 app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+    $urlRouterProvider.otherwise('/login');
     $stateProvider.state('activities', {
         url: '/activities',
         templateUrl: 'activities.html',
