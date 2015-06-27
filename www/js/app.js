@@ -79,7 +79,9 @@ app.config(function($httpProvider) {
 app.factory('PlacesService', ['$http', function($http){
     return {
         getPlaces: function() {
-            return $http.get('../js/data.json');
+            //return $http.get('../js/data.json');
+            return $http.jsonp('http://fiware-porto.citibrain.com/v1/contextEntityTypes/EnvironmentEvent?key=hackacityporto2015_browser&callback=JSON_CALLBACK',
+                { headers:  { 'Accept': 'application/json;' } });
         }
     };
     //return $http.get('http://fiware-porto.citibrain.com/v1/contextEntityTypes/EnvironmentEvent?key=hackacityporto2015_browser');

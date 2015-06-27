@@ -1,17 +1,22 @@
 <div class="container-fluid">
   <div class="row header">
-    <div class="col-xs-12 activity-label">Choose your Activity</div>
+    <div class="col-xs-12"><p>Choose Your Activity</p></div>
   </div>
 </div>
 
-<div class="container-fluid">
   <div class="row">
-    <div class="col-xs-4" ng-repeat="activity in activities">
+    <div class="col-xs-12" ng-repeat="activity in activities">
       <a ui-sref="places({ activity: activity.code })">
-        <div class="activity run">
-          <div class="activity-label">{{ activity.name }}</div>
+        <div class="activity">
+          <ul>
+            <li>
+              <p>{{ activity.name }}</p>
+            </li>
+            <li>
+              <img ng-src="img/{{activity.code}}.jpg">
+            </li>
+          </ul>
         </div> <!-- end col-xs-4 -->
       </a>
     </div>
   </div>
-</div>

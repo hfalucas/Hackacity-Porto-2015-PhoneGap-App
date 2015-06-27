@@ -58,16 +58,34 @@ background-image:-webkit-gradient(
                                    /* offset horizontal: half of text area width */
 }
 
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+
 /************************************************************************************************/
+html, body {
+  height: 100%;
+  font-family: 'Avenir' !important;
+}
+
 
 .btn-app{
   width: 50px;
   height: 20px;
+  background: #fff;
+  border: 1px solid #fff;
 }
 
 .header{
-  padding-top: 20px;
-  background-color: #ccc;
+  padding: 20px 0;
+  background-color: #fff;
+}
+
+.header p {
+  font-size: 16px;
+  margin: 0;
 }
 
 .navbar-nav{
@@ -84,22 +102,47 @@ background-image:-webkit-gradient(
 
 /****************************    SELECT ACTIVITY   *****************************/
 
-.activity{
-  height: 100px;
-  /* background: #555; */
-  border: 1px solid #555;
-  border-radius: 3px;
-  margin: 20px auto;
+.activity {
+  float: left;
+  width: 100%;
+  padding: 0 0 0 20px;
+  background: #f8f8f9;
+  border-top: 1px solid #ededee;
 }
 
-.activity-label{
-  text-align: center;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  margin-bottom: 20px;
-  width: 100%;
+.activity p {
+
 }
+
+.activity ul{
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.activity ul li {
+  width: 50%;
+ float: left;
+}
+
+.activity ul li p {
+  font-size: 20px;
+  color: #000;
+  letter-spacing: 1px;
+  margin: 0;
+  line-height: 110px;
+}
+
+.activity ul li img {
+  width: 110px;
+  float: right;
+}
+
+/*.activity:first-child {
+  border-top: none;
+}*/
 
 .activity.run{}
 
@@ -177,6 +220,7 @@ h1 {
   list-style: none;
   padding: 0;
   margin: 0;
+  float: right;
 }
 
 .user-list li {
@@ -190,4 +234,108 @@ h1 {
   width: 100%;
   top: 0;
   left: 0;
+}
+
+.login-holder {
+  background: url(../img/login-bg.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+}
+ .login-holder h2 {
+  font-weight: 300;
+  text-align: center;
+  color: #fff;
+  margin-top: 200px;
+  margin-bottom: 150px;
+  letter-spacing: 1px;
+ }
+
+
+#login-form label {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+#login-form input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.input-wrapper {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px 20px;
+}
+
+.email-input {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#login-form input::-webkit-input-placeholder {
+   color: rgba(255, 255, 255, 0.7);
+}
+
+#login-form input:-moz-placeholder { /* Firefox 18- */
+   color: rgba(255, 255, 255, 0.7);  
+}
+
+#login-form input::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(255, 255, 255, 0.7);  
+}
+
+#login-form input:-ms-input-placeholder {  
+   color: rgba(255, 255, 255, 0.7);  
+}
+
+.login-holder button {
+  width: 100%;
+  padding: 20px 0;
+  border: 1px solid #6563a4;
+  background: #6563a4;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  outline: none;
+}
+
+.stats:nth-child(even) {
+  background: #50d2c2;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.stats:nth-child(odd) {
+  background: #6563a4;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.join-event-btn {
+  background: #6563a4;
+  width: 100%;
+  border: 1px solid #6563a4;
+  padding: 20px 0;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-top: 210px;
+}
+
+.whos-going {
+  display: inline-block;
+  margin: 0;
+  line-height: 2;
+}
+
+.le-margin {
+  margin-top: 50px;
 }
