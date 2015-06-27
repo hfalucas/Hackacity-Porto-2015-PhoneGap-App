@@ -64,7 +64,6 @@ background-image:-webkit-gradient(
 .btn-app{
   width: 50px;
   height: 20px;
-
 }
 
 .header{
@@ -110,6 +109,13 @@ background-image:-webkit-gradient(
 .activity.kite-surf{}
 
 .activity.beach{}
+
+
+/****************************    CREATE EVENT   *****************************/
+
+textarea{
+  resize: none;
+}
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
