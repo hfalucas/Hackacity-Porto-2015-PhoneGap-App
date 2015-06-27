@@ -61,7 +61,6 @@ background-image:-webkit-gradient(
 
 /************************************************************************************************/
 
-
 .btn{
   width: 50px;
   height: 20px;
@@ -69,7 +68,8 @@ background-image:-webkit-gradient(
 }
 
 .header{
-  margin: 20px auto;
+  padding-top: 20px;
+  background-color: #ccc;
 }
 
 .navbar-nav{
@@ -83,6 +83,33 @@ background-image:-webkit-gradient(
   float: none;
   display: inline-block;
 }
+
+/****************************    SELECT ACTIVITY   *****************************/
+
+.activity{
+  height: 100px;
+  background: #555;
+  margin: 20px auto;
+}
+
+.activity-label{
+  text-align: center;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.activity.run{}
+
+.activity.walk{}
+
+.activity.bike{}
+
+.activity.kite-surf{}
+
+.activity.beach{}
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
