@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="row header">
+    <div class="col-xs-2">
+      <button class="btn-app btn-prev pull-left glyphicon glyphicon-chevron-left" ng-click="back()"></button>
+    </div>
+    <div class="col-xs-10"><p>Stats</p></div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row no-gutter">
+    <div class="col-xs-4 stats" ng-repeat="stat in stats">
+        <small>{{ stat.name }}</small>
+        <h3>{{ stat.value }}</h3>
+    </div>
+  </div>
+</div>
+
+<div ng-if="!hasEvent">
+  <div class="row">
+    <div class="col-md-12">
+      <button type="button" class="join-event-btn" ng-click="addEvent()">Organize Event</button>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid le-margin" ng-if="hasEvent">
+  <div class="row">
+    <div class="col-xs-12">
+    <p class="whos-going">Who's going</p>
+      <ul class="user-list">
+        <li ng-repeat="user in users.users">
+          <img src="img/default-profile.jpg" class="img-circle center-block" style="width: 33px;">
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div ng-if="hasEvent">
+  <div class="row">
+    <div class="col-md-12">
+      <button type="button" class="join-event-btn">Join Event</button>
+    </div>
+  </div>

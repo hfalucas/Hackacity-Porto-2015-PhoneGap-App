@@ -1,0 +1,26 @@
+	<div class="login-holder">
+		<div class="row">
+			<div class="col-xs-12">
+				<h2>Get Started!</h2>
+			</div>
+		</div>
+		<div class="row">
+			<form ng-submit="authenticate(c)" id="login-form">
+				<div class="col-xs-12">
+					<div class="input-wrapper email-input">
+						<label>E-mail</label>
+						<input type="text" ng-model="c.email" placeholder="Email">
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="input-wrapper">
+						<label>Password</label>
+						<input type="password" ng-model="c.password" placeholder="Password">
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<button>Login</button>
+				</div>
+			</form>
+		</div>
+	</div> <!-- end login-holder -->
